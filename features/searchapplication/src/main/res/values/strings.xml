@@ -1,4 +1,8 @@
 <resources>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="discount_tool_text">25% OFF</string>
+    <string name="price_tool_text">$3.000.000</string>
+    <string name="product_tool_text">Iphone 11</string>
+    <string name="shipping_free_tool_text">Envio gratis</string>
+    <string name="discount_text_tool_text">25 % descuento</string>
+    <string name="pay_ways_text_tool_text">Paga en 30 cuotas de $100.000</string>
 </resources>

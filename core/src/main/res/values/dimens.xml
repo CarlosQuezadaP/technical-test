@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="multiplier_x2_0dp">0dp</dimen>
+    <dimen name="multiplier_2x_40dp">80dp</dimen>
+    <dimen name="multiplier_2x_50dp">100dp</dimen>
+    <dimen name="multiplier_2x_5dp">10dp</dimen>
+</resources>
