@@ -2,3 +2,4 @@ rootProject.name = "Mercadolibre"
 include ':app'
 include ':features'
 include ':features:searchapplication'
+include ':core'
