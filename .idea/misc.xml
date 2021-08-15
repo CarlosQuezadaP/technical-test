@@ -5,6 +5,8 @@
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19047619047619047" />
         <entry key="app/src/main/res/layout/fragment_splash_screen.xml" value="0.32518115942028986" />
+        <entry key="features/searchapplication/src/main/res/layout/fragment_main.xml" value="0.32518115942028986" />
+        <entry key="features/searchapplication/src/main/res/layout/fragment_search.xml" value="0.32447916666666665" />
       </map>
     </option>
   </component>

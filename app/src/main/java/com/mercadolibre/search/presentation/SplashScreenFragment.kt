@@ -17,24 +17,25 @@ import kotlinx.coroutines.withContext
 class SplashScreenFragment : Fragment() {
 
     private var _binding: FragmentSplashScreenBinding? = null
-    private val binding = _binding
+
+    private val binding get() = _binding!!
+
     val scope = CoroutineScope(Job() + Dispatchers.Main)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentSplashScreenBinding.inflate(inflater, container, false)
-        val view = binding?.root
-        return view
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        scope.launch {
+        CoroutineScope(Dispatchers.IO).launch {
             delay(2000)
-            withContext(Dispatchers.IO) {
-
+            withContext(Dispatchers.Main) {
+                findNavController().navigate(SplashScreenFragmentDirections.actionSplashScreenFragmentToSearchNavGraph())
             }
         }
     }
