@@ -1,4 +1,4 @@
-package com.mercadolibre.searchapplication.presentation
+package com.mercadolibre.searchapplication.presentation.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
