@@ -9,7 +9,6 @@
         android:id="@+id/imageView_product_front"
         android:layout_width="@dimen/multiplier_x2_40dp"
         android:layout_height="@dimen/multiplier_x2_50dp"
-        android:background="@color/colorPrimary"
         android:maxHeight="@dimen/multiplier_x2_60dp"
         app:layout_constraintStart_toStartOf="@id/guideline_vertical_begin"
         app:layout_constraintTop_toTopOf="@id/guideline_horizontal_begin"

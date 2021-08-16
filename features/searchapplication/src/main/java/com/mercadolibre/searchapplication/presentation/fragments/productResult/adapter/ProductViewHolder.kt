@@ -21,7 +21,7 @@ class ProductViewHolder(itemView: ProductResultItemBinding) :
             }
             imageViewProductFront.loadImageFromUrl(product.image)
             textViewProductTitle.text = product.name
-            textViewProductPrice.text = formatPrice(product.price)
+            textViewProductPrice.text = product.price.formatPrice()
             product.installments?.let {
                 if (product.isWithoutInterest) {
                     textViewProductPayWays.run {
@@ -40,7 +40,7 @@ class ProductViewHolder(itemView: ProductResultItemBinding) :
                 }
             }
             product.discount?.let {
-                val discount = "$it$DISCOUNT_COMPLEMENT"
+                val discount = "$it%OFF"
                 textViewProductDiscount.run {
                     text = discount
                     visibility = View.VISIBLE
@@ -50,4 +50,3 @@ class ProductViewHolder(itemView: ProductResultItemBinding) :
     }
 }
 
-const val DISCOUNT_COMPLEMENT = "%OFF"

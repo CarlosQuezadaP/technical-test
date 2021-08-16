@@ -6,5 +6,5 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class Installments(val quantity: Int, val amount: Double) : Parcelable {
-    override fun toString() = "${quantity}x ${formatPrice(amount)}"
+    override fun toString() = "${quantity}x ${amount.formatPrice()}"
 }
