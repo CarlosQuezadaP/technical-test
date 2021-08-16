@@ -1,6 +1,6 @@
 package com.mercadolibre.searchapplication.data.api
 
-import com.mercadolibre.searchapplication.data.models.dto.api.ProductResultDto
+import com.mercadolibre.searchapplication.data.models.dto.api.resultProducts.ProductResultDto
 import retrofit2.http.GET
 import retrofit2.http.Query
 

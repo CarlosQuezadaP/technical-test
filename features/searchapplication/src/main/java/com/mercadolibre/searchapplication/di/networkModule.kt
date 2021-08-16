@@ -1,6 +1,7 @@
 package com.condor.data.di
 
 import com.mercadolibre.searchapplication.data.api.ApiProducts
+import com.mercadolibre.searchapplication.data.api.ApiSuggestion
 import com.mercadolibre.searchapplication.data.network.BASE_URL
 import java.util.concurrent.TimeUnit
 import okhttp3.OkHttpClient
@@ -41,14 +42,22 @@ val networkModule = module {
         return okHttpClientBuilder.build()
     }
 
-    single { provideHttpClient() }
-
-    single<ApiProducts> {
-        Retrofit.Builder()
+    fun provideBuild(): Retrofit {
+        return Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
-            .client(get())
+            .client(provideHttpClient())
             .build()
+    }
+
+    single<ApiProducts> {
+        provideBuild()
             .create(ApiProducts::class.java)
     }
+
+    single<ApiSuggestion> {
+        provideBuild()
+            .create(ApiSuggestion::class.java)
+    }
+
 }

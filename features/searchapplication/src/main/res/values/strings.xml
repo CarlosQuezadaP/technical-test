@@ -9,4 +9,5 @@
     <string name="installment_without_interest">"en %s sin interés"</string>
     <string name="installment">"en %s</string>
     <string name="suggestion_tool_text">Iphone 11</string>
+    <string name="buscar_en_mercadolibre">Buscar en MercadoLibre</string>
 </resources>

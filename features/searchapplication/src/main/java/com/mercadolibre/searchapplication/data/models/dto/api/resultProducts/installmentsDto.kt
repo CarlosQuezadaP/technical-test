@@ -1,4 +1,4 @@
-package com.mercadolibre.searchapplication.data.models.dto.api
+package com.mercadolibre.searchapplication.data.models.dto.api.resultProducts
 
 import com.google.gson.annotations.SerializedName
 import com.mercadolibre.searchapplication.domain.models.Installments

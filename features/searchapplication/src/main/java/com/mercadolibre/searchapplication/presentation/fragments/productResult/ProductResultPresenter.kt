@@ -25,7 +25,6 @@ class ProductResultPresenter(
                 }
         }
     }
-
     override lateinit var view: ProductResultContract.View
 
 }

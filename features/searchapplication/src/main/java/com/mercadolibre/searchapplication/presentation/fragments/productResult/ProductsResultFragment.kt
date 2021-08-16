@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.navArgs
 import androidx.paging.PagingData
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.mercadolibre.searchapplication.R
@@ -24,6 +25,8 @@ class ProductsResultFragment : Fragment(), ProductResultContract.View, ProductCa
 
     private var binding: FragmentProductsResultBinding? = null
 
+    private val productsResultFragmentArgs: ProductsResultFragmentArgs by navArgs()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -37,11 +40,9 @@ class ProductsResultFragment : Fragment(), ProductResultContract.View, ProductCa
         presenter.view = this
         productsAdapter = ProductsAdapter(this)
         binding?.setupViews()
-    }
+        val query = productsResultFragmentArgs.query
+        presenter.getProducts(query)
 
-    override fun onResume() {
-        super.onResume()
-        presenter.getProducts("Iphone")
     }
 
     override fun showProducts(products: PagingData<Product>) {
