@@ -7,15 +7,21 @@
 
     <ImageView
         android:id="@+id/imageView_product_front"
-        android:layout_width="@dimen/multiplier_2x_40dp"
-        android:layout_height="@dimen/multiplier_2x_50dp"
+        android:layout_width="@dimen/multiplier_x2_40dp"
+        android:layout_height="@dimen/multiplier_x2_50dp"
+        android:background="@color/colorPrimary"
+        android:maxHeight="@dimen/multiplier_x2_60dp"
         app:layout_constraintStart_toStartOf="@id/guideline_vertical_begin"
-        app:layout_constraintTop_toTopOf="@id/guideline_horizontal_begin" />
+        app:layout_constraintTop_toTopOf="@id/guideline_horizontal_begin"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/textView_product_title"
         android:layout_width="@dimen/multiplier_x2_0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/multiplier_x2_8dp"
+        android:textColor="@color/black_medium"
+        android:textSize="@dimen/multiplier_x2_5sp"
         app:layout_constraintEnd_toEndOf="@id/guideline_vertical_end"
         app:layout_constraintStart_toEndOf="@+id/imageView_product_front"
         app:layout_constraintTop_toTopOf="@id/guideline_horizontal_begin"
@@ -25,10 +31,12 @@
         android:id="@+id/textView_product_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/multiplier_2x_5dp"
+        android:layout_marginTop="@dimen/multiplier_x2_5dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/multiplier_x2_8sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_end"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView_product_front"
+        app:layout_constraintStart_toStartOf="@+id/textView_product_title"
         app:layout_constraintTop_toBottomOf="@+id/textView_product_title"
         tools:text="@string/price_tool_text" />
 
@@ -36,20 +44,25 @@
         android:id="@+id/textView_product_discount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/multiplier_2x_5dp"
+        android:layout_marginStart="@dimen/multiplier_x2_5dp"
+        android:textColor="@color/meli_green"
+        android:textSize="@dimen/multiplier_x2_6sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_product_price"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView_product_price"
-        app:layout_constraintTop_toTopOf="@+id/textView_product_price"
         tools:text="@string/discount_tool_text" />
 
     <TextView
         android:id="@+id/textView_product_pay_ways"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/multiplier_x2_0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/multiplier_x2_1dp"
+        android:textColor="@color/black_medium"
+        android:textSize="@dimen/multiplier_x2_4sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_end"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView_product_front"
+        app:layout_constraintStart_toStartOf="@+id/textView_product_title"
         app:layout_constraintTop_toBottomOf="@+id/textView_product_price"
         tools:text="@string/pay_ways_text_tool_text" />
 
@@ -57,10 +70,13 @@
         android:id="@+id/textView_product_shipping"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/multiplier_x2_4dp"
+        android:textColor="@color/meli_green"
+        android:text="@string/shipping_free_tool_text"
+        android:textSize="@dimen/multiplier_x2_4sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_end"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView_product_front"
+        app:layout_constraintStart_toStartOf="@+id/textView_product_title"
         app:layout_constraintTop_toBottomOf="@+id/textView_product_pay_ways"
         tools:text="@string/shipping_free_tool_text" />
 
@@ -68,22 +84,22 @@
         android:id="@+id/guideline_horizontal_begin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/multiplier_2x_5dp"
+        android:layout_marginTop="@dimen/multiplier_x2_5dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="8dp" />
+        app:layout_constraintGuide_begin="@dimen/multiplier_x2_4dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_vertical_begin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="8dp" />
+        app:layout_constraintGuide_begin="@dimen/multiplier_x2_4dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_vertical_end"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="8dp" />
+        app:layout_constraintGuide_end="@dimen/multiplier_x2_4dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

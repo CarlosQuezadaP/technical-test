@@ -5,4 +5,7 @@
     <string name="shipping_free_tool_text">Envio gratis</string>
     <string name="discount_text_tool_text">25 % descuento</string>
     <string name="pay_ways_text_tool_text">Paga en 30 cuotas de $100.000</string>
+
+    <string name="installment_without_interest">"en %s sin interés"</string>
+    <string name="installment">"en %s</string>
 </resources>
