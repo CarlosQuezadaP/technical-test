@@ -7,12 +7,14 @@
     <dimen name="multiplier_x2_5dp">10dp</dimen>
     <dimen name="multiplier_x2_6dp">12dp</dimen>
     <dimen name="multiplier_x2_8dp">16dp</dimen>
+    <dimen name="multiplier_x2_16dp">32dp</dimen>
     <dimen name="multiplier_x2_40dp">80dp</dimen>
     <dimen name="multiplier_x2_50dp">100dp</dimen>
     <dimen name="multiplier_x2_60dp">120dp</dimen>
     <dimen name="multiplier_x2_4sp">8sp</dimen>
     <dimen name="multiplier_x2_5sp">10sp</dimen>
     <dimen name="multiplier_x2_6sp">12sp</dimen>
+    <dimen name="multiplier_x2_7sp">14sp</dimen>
     <dimen name="multiplier_x2_8sp">16sp</dimen>
     <dimen name="multiplier_x2_9sp">18sp</dimen>
 </resources>

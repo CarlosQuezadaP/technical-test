@@ -8,11 +8,15 @@ interface SearchSuggestionContract {
 
     interface View : BaseView<Presenter> {
 
-        fun showSuggestions(list:List<String>)
+        fun showSuggestions(list: List<String>)
+        fun showEmptySearch()
+        fun hideEmptySearch()
+        fun showEmptyResult()
+        fun hideEmptyResult()
+        fun hideList()
+        fun showList()
+
     }
 
-    interface Presenter : BasePresenter<View>,TextWatcher  {
-
-
-    }
+    interface Presenter : BasePresenter<View>, TextWatcher
 }

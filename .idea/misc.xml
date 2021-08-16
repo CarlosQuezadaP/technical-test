@@ -14,6 +14,7 @@
         <entry key="features/searchapplication/src/main/res/drawable/baseline_saved_search_grey_400_24dp.xml" value="0.4015384615384615" />
         <entry key="features/searchapplication/src/main/res/drawable/ic_error_loading.xml" value="0.1" />
         <entry key="features/searchapplication/src/main/res/drawable/ic_search.xml" value="0.21574074074074073" />
+        <entry key="features/searchapplication/src/main/res/drawable/ic_search_off.xml" value="0.23981481481481481" />
         <entry key="features/searchapplication/src/main/res/drawable/pasd.xml" value="0.38333333333333336" />
         <entry key="features/searchapplication/src/main/res/drawable/pb_circular_determinative.xml" value="0.28177083333333336" />
         <entry key="features/searchapplication/src/main/res/drawable/recycler_divider.xml" value="0.31296296296296294" />
@@ -23,8 +24,11 @@
         <entry key="features/searchapplication/src/main/res/layout/fragment_detail.xml" value="0.3654891304347826" />
         <entry key="features/searchapplication/src/main/res/layout/fragment_main.xml" value="0.32518115942028986" />
         <entry key="features/searchapplication/src/main/res/layout/fragment_products_result.xml" value="0.10413954751545532" />
-        <entry key="features/searchapplication/src/main/res/layout/fragment_search.xml" value="0.1" />
+        <entry key="features/searchapplication/src/main/res/layout/fragment_search.xml" value="0.2935708752904725" />
         <entry key="features/searchapplication/src/main/res/layout/product_result_item.xml" value="0.28498727735368956" />
+        <entry key="features/searchapplication/src/main/res/layout/search_clear_layout.xml" value="0.1833839918946302" />
+        <entry key="features/searchapplication/src/main/res/layout/search_empty.xml" value="0.1833839918946302" />
+        <entry key="features/searchapplication/src/main/res/layout/search_empty_layout.xml" value="0.40705080170685637" />
         <entry key="features/searchapplication/src/main/res/layout/search_result_item.xml" value="0.35643115942028986" />
       </map>
     </option>

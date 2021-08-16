@@ -78,4 +78,24 @@
         app:layout_constraintTop_toBottomOf="@+id/appBarSearchProducts"
         tools:listitem="@layout/search_result_item" />
 
+    <ViewStub
+        android:id="@+id/viewStub_empty"
+        android:layout_width="@dimen/multiplier_x2_0dp"
+        android:layout_height="@dimen/multiplier_x2_0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarSearchProducts" />
+
+    <ViewStub
+        android:id="@+id/viewStub_clear_text"
+        android:layout_width="@dimen/multiplier_x2_0dp"
+        android:layout_height="@dimen/multiplier_x2_0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarSearchProducts" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

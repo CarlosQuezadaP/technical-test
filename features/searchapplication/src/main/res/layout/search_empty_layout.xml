@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_medium"
+    android:padding="@dimen/multiplier_x2_16dp">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_ProductEmptyIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:lottie_rawRes="@raw/lottie_empty"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="contentDescription" />
+
+    <TextView
+        android:id="@+id/textView_EmptyTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/multiplier_x2_4dp"
+        android:layout_marginTop="@dimen/multiplier_x2_4dp"
+        android:gravity="center"
+        android:textSize="@dimen/multiplier_x2_9sp"
+        android:textColor="@color/black_medium"
+        android:maxLines="1"
+        android:text="@string/empty_search_noTitle"
+        app:layout_constraintTop_toBottomOf="@id/lottie_ProductEmptyIcon" />
+
+    <TextView
+        android:id="@+id/tvProductEmptySubtitle"
+        android:layout_width="@dimen/multiplier_x2_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/multiplier_x2_2dp"
+        android:layout_marginTop="@dimen/multiplier_x2_2dp"
+        android:gravity="center"
+        android:text="@string/empty_search_subtitle"
+        android:textSize="@dimen/multiplier_x2_7sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_EmptyTitle" />
+</androidx.constraintlayout.widget.ConstraintLayout>

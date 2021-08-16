@@ -22,7 +22,18 @@ class SearchSuggestionPresenter(private val suggestionsUseCase: GetSuggestionsUs
                 }
                 .collect {
                     when (it) {
-                        is ResultWrapper.Success -> view.showSuggestions(it.data.suggestions)
+                        is ResultWrapper.Success -> {
+                            val suggestions = it.data.suggestions
+                            if (suggestions.isEmpty()) {
+                                view.hideList()
+                                view.showEmptyResult()
+                            } else {
+                                view.showList()
+                                view.showSuggestions(suggestions)
+                                view.hideEmptyResult()
+                            }
+                            view.hideEmptySearch()
+                        }
 
                         is ResultWrapper.Error -> {
 
@@ -50,5 +61,9 @@ class SearchSuggestionPresenter(private val suggestionsUseCase: GetSuggestionsUs
         val value = s.toString()
         if (value.isNotEmpty())
             getSuggestion(s.toString())
+        else
+            view.showEmptySearch()
+            view.hideEmptyResult()
+            view.hideList()
     }
 }
