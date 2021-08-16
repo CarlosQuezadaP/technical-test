@@ -18,4 +18,15 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@layout/product_result_item" />
 
+    <ProgressBar
+        android:id="@+id/circular_determinative_pb"
+        android:layout_width="@dimen/multiplier_x2_50dp"
+        android:layout_height="@dimen/multiplier_x2_50dp"
+        android:indeterminateOnly="false"
+        android:progressDrawable="@drawable/pb_circular_determinative"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

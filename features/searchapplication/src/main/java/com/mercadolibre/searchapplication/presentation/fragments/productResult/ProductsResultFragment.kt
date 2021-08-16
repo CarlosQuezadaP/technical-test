@@ -16,7 +16,7 @@ import com.mercadolibre.searchapplication.presentation.fragments.productResult.a
 import kotlinx.coroutines.launch
 import org.koin.android.ext.android.inject
 
-class ProductsResultFragment : Fragment(), ProductResultContract.View {
+class ProductsResultFragment : Fragment(), ProductResultContract.View, ProductCallback {
 
     private lateinit var productsAdapter: ProductsAdapter
 
@@ -35,7 +35,7 @@ class ProductsResultFragment : Fragment(), ProductResultContract.View {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         presenter.view = this
-        productsAdapter = ProductsAdapter()
+        productsAdapter = ProductsAdapter(this)
         binding?.setupViews()
     }
 
@@ -50,6 +50,16 @@ class ProductsResultFragment : Fragment(), ProductResultContract.View {
         }
     }
 
+    override fun showLoading() {
+        binding?.circularDeterminativePb?.visibility = View.VISIBLE
+    }
+
+    override fun hideLoading() {
+        lifecycleScope.launch {
+            binding?.circularDeterminativePb?.visibility = View.GONE
+        }
+    }
+
     private fun FragmentProductsResultBinding.setupViews() {
         recyclerViewProductsResult.run {
             adapter = productsAdapter
@@ -59,6 +69,10 @@ class ProductsResultFragment : Fragment(), ProductResultContract.View {
                 }
             })
         }
+    }
+
+    override fun onProductClick(product: Product) {
+        //Navigate
     }
 
 }

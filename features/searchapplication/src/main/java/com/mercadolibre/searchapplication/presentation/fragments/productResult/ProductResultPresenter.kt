@@ -12,6 +12,7 @@ class ProductResultPresenter(
 ) : ProductResultContract.Presenter {
 
     override fun getProducts(query: String) {
+        view.showLoading()
         CoroutineScope(Dispatchers.IO).launch {
             val products = getProductsUseCase.invoke(query).flow
             products
@@ -20,6 +21,7 @@ class ProductResultPresenter(
                 }
                 .collect {
                     view.showProducts(it)
+                    view.hideLoading()
                 }
         }
     }

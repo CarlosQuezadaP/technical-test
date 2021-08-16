@@ -8,14 +8,22 @@ import com.mercadolibre.searchapplication.databinding.ProductResultItemBinding
 import com.mercadolibre.searchapplication.domain.models.Product
 import com.mercadolibre.searchapplication.extensions.formatPrice
 import com.mercadolibre.searchapplication.extensions.loadImageFromUrl
+import com.mercadolibre.searchapplication.presentation.fragments.productResult.ProductCallback
 
-class ProductViewHolder(itemView: ProductResultItemBinding) :
+class ProductViewHolder(
+    itemView: ProductResultItemBinding,
+    private val productCallback: ProductCallback
+) :
     RecyclerView.ViewHolder(itemView.root) {
 
     private val binding = itemView
 
     fun bind(product: Product) {
+        itemView.setOnClickListener {
+            productCallback.onProductClick(product)
+        }
         with(binding) {
+
             if (product.isFreeShipping) {
                 textViewProductShipping.visibility = View.VISIBLE
             }
