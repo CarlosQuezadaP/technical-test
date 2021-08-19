@@ -9,7 +9,6 @@ import com.mercadolibre.searchapplication.extensions.loadImageFromUrl
 import org.koin.android.ext.android.inject
 import androidx.appcompat.app.AppCompatActivity
 import android.view.*
-import com.mercadolibre.searchapplication.R
 
 
 class DetailFragment : BaseFragment() {
@@ -75,7 +74,7 @@ class DetailFragment : BaseFragment() {
 
     private fun bindProductToView(product:Product){
         with(fragmentDetailBinding){
-            ivProduct.loadImageFromUrl(product.image)
+            imageViewProduct.loadImageFromUrl(product.image)
         }
     }
 

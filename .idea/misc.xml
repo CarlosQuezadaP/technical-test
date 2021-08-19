@@ -5,11 +5,27 @@
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.2375" />
         <entry key="..\:/Users/CarlosPC/Documents/Mercadolibre/mercadolibre-search/app/src/main/res/drawable/ic_launcher_background.xml" value="0.19537037037037036" />
+        <entry key="..\:/Users/CarlosPC/Documents/Mercadolibre/mercadolibre-search/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.19537037037037036" />
+        <entry key="..\:/Users/CarlosPC/Documents/Mercadolibre/mercadolibre-search/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.19537037037037036" />
+        <entry key="..\:/Users/CarlosPC/Documents/Mercadolibre/mercadolibre-search/features/searchapplication/src/main/res/drawable/baseline_arrow_back_black_24dp.xml" value="0.19537037037037036" />
+        <entry key="..\:/Users/CarlosPC/Documents/Mercadolibre/mercadolibre-search/features/searchapplication/src/main/res/drawable/baseline_clear_black_24dp.xml" value="0.19537037037037036" />
+        <entry key="..\:/Users/CarlosPC/Documents/Mercadolibre/mercadolibre-search/features/searchapplication/src/main/res/drawable/baseline_north_west_grey_400_24dp.xml" value="0.19537037037037036" />
+        <entry key="..\:/Users/CarlosPC/Documents/Mercadolibre/mercadolibre-search/features/searchapplication/src/main/res/drawable/baseline_saved_search_grey_400_24dp.xml" value="0.19537037037037036" />
+        <entry key="..\:/Users/CarlosPC/Documents/Mercadolibre/mercadolibre-search/features/searchapplication/src/main/res/drawable/ic_error_loading.xml" value="0.19537037037037036" />
+        <entry key="..\:/Users/CarlosPC/Documents/Mercadolibre/mercadolibre-search/features/searchapplication/src/main/res/drawable/ic_search.xml" value="0.19537037037037036" />
+        <entry key="..\:/Users/CarlosPC/Documents/Mercadolibre/mercadolibre-search/features/searchapplication/src/main/res/drawable/ic_search_off.xml" value="0.19537037037037036" />
+        <entry key="..\:/Users/CarlosPC/Documents/Mercadolibre/mercadolibre-search/features/searchapplication/src/main/res/drawable/pasd.xml" value="0.19537037037037036" />
+        <entry key="..\:/Users/CarlosPC/Documents/Mercadolibre/mercadolibre-search/features/searchapplication/src/main/res/drawable/pb_circular_determinative.xml" value="0.19537037037037036" />
+        <entry key="..\:/Users/CarlosPC/Documents/Mercadolibre/mercadolibre-search/features/searchapplication/src/main/res/drawable/recycler_divider.xml" value="0.19537037037037036" />
         <entry key="..\:/Users/CarlosPC/Documents/Mercadolibre/mercadolibre-search/features/searchapplication/src/main/res/drawable/search_cursor.xml" value="0.1" />
+        <entry key="..\:/Users/CarlosPC/Documents/Mercadolibre/mercadolibre-search/features/searchapplication/src/main/res/drawable/search_round_background.xml" value="0.19537037037037036" />
+        <entry key="..\:/Users/CarlosPC/Documents/Mercadolibre/mercadolibre-search/features/searchapplication/src/main/res/drawable/search_rounded_background.xml" value="0.19537037037037036" />
+        <entry key="..\:/Users/CarlosPC/Documents/Mercadolibre/mercadolibre-search/features/searchapplication/src/main/res/font/actor.xml" value="0.19537037037037036" />
         <entry key="..\:/Users/CarlosPC/Documents/Mercadolibre/mercadolibre-search/features/searchapplication/src/main/res/layout/content_description.xml" value="0.12462006079027356" />
         <entry key="..\:/Users/CarlosPC/Documents/Mercadolibre/mercadolibre-search/features/searchapplication/src/main/res/layout/fragment_detail.xml" value="0.1" />
         <entry key="..\:/Users/CarlosPC/Documents/Mercadolibre/mercadolibre-search/features/searchapplication/src/main/res/layout/fragment_products_result.xml" value="0.3695920889987639" />
         <entry key="..\:/Users/CarlosPC/Documents/Mercadolibre/mercadolibre-search/features/searchapplication/src/main/res/layout/fragment_search.xml" value="0.22" />
+        <entry key="..\:/Users/CarlosPC/Documents/Mercadolibre/mercadolibre-search/features/searchapplication/src/main/res/layout/layout_content_description.xml" value="0.1527777777777778" />
         <entry key="..\:/Users/CarlosPC/Documents/Mercadolibre/mercadolibre-search/features/searchapplication/src/main/res/layout/menu.xml" value="0.175" />
         <entry key="..\:/Users/CarlosPC/Documents/Mercadolibre/mercadolibre-search/features/searchapplication/src/main/res/layout/product_result_item.xml" value="0.1" />
         <entry key="..\:/Users/CarlosPC/Documents/Mercadolibre/mercadolibre-search/features/searchapplication/src/main/res/layout/search_clear_layout.xml" value="0.17831813576494426" />

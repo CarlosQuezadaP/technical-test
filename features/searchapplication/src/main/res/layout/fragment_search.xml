@@ -9,7 +9,7 @@
         android:id="@+id/appBarSearchProducts"
         android:layout_width="@dimen/multiplier_x2_0dp"
         android:layout_height="wrap_content"
-        android:theme="@style/SearchProductsBoxStyleTwo"
+        android:theme="@style/SearchBoxSecundaryStyle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
