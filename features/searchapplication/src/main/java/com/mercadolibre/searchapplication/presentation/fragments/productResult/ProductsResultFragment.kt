@@ -5,19 +5,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.paging.PagingData
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.mercadolibre.searchapplication.R
+import com.mercadolibre.searchapplication.base.BaseFragment
 import com.mercadolibre.searchapplication.databinding.FragmentProductsResultBinding
 import com.mercadolibre.searchapplication.domain.models.Product
 import com.mercadolibre.searchapplication.presentation.fragments.productResult.adapter.ProductsAdapter
 import kotlinx.coroutines.launch
 import org.koin.android.ext.android.inject
 
-class ProductsResultFragment : Fragment(), ProductResultContract.View, ProductCallback {
+class ProductsResultFragment : BaseFragment(), ProductResultContract.View, ProductCallback {
 
     private lateinit var productsAdapter: ProductsAdapter
 
@@ -39,10 +40,16 @@ class ProductsResultFragment : Fragment(), ProductResultContract.View, ProductCa
         super.onViewCreated(view, savedInstanceState)
         presenter.view = this
         productsAdapter = ProductsAdapter(this)
-        binding?.setupViews()
         val query = productsResultFragmentArgs.query
+        binding?.setupViews(query)
         presenter.getProducts(query)
+    }
 
+    private fun navigateToSearchFragment(text: String) {
+        val action = ProductsResultFragmentDirections.actionProductResultToSearchFragment(
+            text
+        )
+        findNavController().navigate(action)
     }
 
     override fun showProducts(products: PagingData<Product>) {
@@ -61,7 +68,17 @@ class ProductsResultFragment : Fragment(), ProductResultContract.View, ProductCa
         }
     }
 
-    private fun FragmentProductsResultBinding.setupViews() {
+    private fun FragmentProductsResultBinding.setupViews(query: String) {
+
+        incSearch.editextSearchProduct.let { editextSearch ->
+            editextSearch.setText(query)
+            editextSearch.setOnClickListener {
+                navigateToSearchFragment(editextSearch.text.toString())
+            }
+        }
+        textViewCancel.setOnClickListener {
+            navigateToSearchFragment("")
+        }
         recyclerViewProductsResult.run {
             adapter = productsAdapter
             addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL).apply {
@@ -73,7 +90,7 @@ class ProductsResultFragment : Fragment(), ProductResultContract.View, ProductCa
     }
 
     override fun onProductClick(product: Product) {
-        //Navigate
+
     }
 
 }

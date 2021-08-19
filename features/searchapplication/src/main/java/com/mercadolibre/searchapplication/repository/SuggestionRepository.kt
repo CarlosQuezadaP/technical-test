@@ -10,10 +10,8 @@ import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.mapLatest
 
 class SuggestionRepository(private val apiSuggestion: ApiSuggestion) : ISuggestionRepository {
-
     override suspend fun getSuggestionByQuery(query: String): Flow<ResultWrapper<AutoSuggestion>> =
         flowOf(apiSuggestion.getAutoSuggestions(query).toAutosuggestion())
             .catch { exc -> ResultWrapper.Error(exc.message.toString()) }
             .mapLatest { ResultWrapper.Success(it) }
-
 }

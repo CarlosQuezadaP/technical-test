@@ -31,7 +31,6 @@ val networkModule = module {
             chain.proceed(
                 request.newBuilder()
                     .url(url)
-                    .removeHeader("Pragma")
                     .addHeader("Content-type", "application/json")
                     .addHeader("Cache-Control", "public, max-age=$NETWORK_AVAILABLE_AGE")
                     .build()

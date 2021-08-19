@@ -4,44 +4,52 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.mercadolibre.searchapplication.R
+import com.mercadolibre.searchapplication.base.BaseFragment
 import com.mercadolibre.searchapplication.databinding.FragmentSearchBinding
 import com.mercadolibre.searchapplication.presentation.fragments.search.SearchSuggestionContract.Presenter
 import com.mercadolibre.searchapplication.presentation.fragments.search.adapter.SuggestionAdapter
 import kotlinx.coroutines.launch
 import org.koin.android.ext.android.inject
 
-class SearchFragment : Fragment(), SearchSuggestionContract.View, SuggestedCallback {
+class SearchFragment : BaseFragment(), SearchSuggestionContract.View, SuggestedCallback {
 
     private lateinit var suggestionAdapter: SuggestionAdapter
 
     override val presenter by inject<Presenter>()
 
-    lateinit var binding: FragmentSearchBinding
+    private lateinit var binding: FragmentSearchBinding
 
-    //Todo Crear base
+    private val searchFragmentArgs: SearchFragmentArgs? by navArgs()
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentSearchBinding.inflate(inflater)
-
+        presenter.view = this
+        lifecycle.addObserver(presenter)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        presenter.view = this
+
         suggestionAdapter = SuggestionAdapter(this)
         binding.recyclerViewSuggestion.adapter = suggestionAdapter
         binding.editextSearchProducts.addTextChangedListener(presenter)
+        searchFragmentArgs?.query?.let {
+            binding.editextSearchProducts.setText(it)
+        }
     }
 
     override fun suggestedOnClick(query: String) {
-        val action = SearchFragmentDirections.actionSearchFragmentToMainFragment(query)
+        hideKeyboard()
+        val action = SearchFragmentDirections.actionSearchFragmentToProductResultFragment(query)
         findNavController().navigate(action)
     }
 
@@ -73,7 +81,9 @@ class SearchFragment : Fragment(), SearchSuggestionContract.View, SuggestedCallb
     }
 
     override fun showEmptySearch() {
-        suggestionAdapter.submitList(emptyList())
+        if (::suggestionAdapter.isInitialized) {
+            suggestionAdapter.submitList(emptyList())
+        }
         with(binding) {
             viewStubClearText.run {
                 if (layoutResource == 0) {
@@ -83,6 +93,7 @@ class SearchFragment : Fragment(), SearchSuggestionContract.View, SuggestedCallb
                 visibility = View.VISIBLE
             }
         }
+        hideKeyboard()
     }
 
     override fun hideEmptySearch() {
@@ -99,7 +110,9 @@ class SearchFragment : Fragment(), SearchSuggestionContract.View, SuggestedCallb
                         layoutResource = R.layout.search_empty_layout
                         inflate()
                     }
-                    visibility = View.VISIBLE
+                    if (visibility != View.VISIBLE) {
+                        visibility = View.VISIBLE
+                    }
                 }
             }
         }

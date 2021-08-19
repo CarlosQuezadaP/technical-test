@@ -4,6 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.2375" />
+        <entry key="..\:/Users/CarlosPC/Documents/Mercadolibre/mercadolibre-search/features/searchapplication/src/main/res/drawable/search_cursor.xml" value="0.1" />
+        <entry key="..\:/Users/CarlosPC/Documents/Mercadolibre/mercadolibre-search/features/searchapplication/src/main/res/layout/fragment_products_result.xml" value="0.3695920889987639" />
+        <entry key="..\:/Users/CarlosPC/Documents/Mercadolibre/mercadolibre-search/features/searchapplication/src/main/res/layout/fragment_search.xml" value="0.22" />
+        <entry key="..\:/Users/CarlosPC/Documents/Mercadolibre/mercadolibre-search/features/searchapplication/src/main/res/layout/product_result_item.xml" value="0.1" />
+        <entry key="..\:/Users/CarlosPC/Documents/Mercadolibre/mercadolibre-search/features/searchapplication/src/main/res/layout/search_clear_layout.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/CarlosPC/Documents/Mercadolibre/mercadolibre-search/features/searchapplication/src/main/res/layout/search_empty_layout.xml" value="0.1" />
+        <entry key="..\:/Users/CarlosPC/Documents/Mercadolibre/mercadolibre-search/features/searchapplication/src/main/res/layout/search_fake.xml" value="0.1" />
+        <entry key="..\:/Users/CarlosPC/Documents/Mercadolibre/mercadolibre-search/features/searchapplication/src/main/res/layout/search_result_item.xml" value="0.17572463768115942" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.23854166666666668" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.23854166666666668" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19047619047619047" />
@@ -38,5 +46,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.75" />
+      </ProjectState>
+    </option>
   </component>
 </project>

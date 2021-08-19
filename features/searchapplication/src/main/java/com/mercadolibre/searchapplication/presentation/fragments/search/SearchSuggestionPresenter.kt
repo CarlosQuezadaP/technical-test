@@ -1,6 +1,9 @@
 package com.mercadolibre.searchapplication.presentation.fragments.search
 
 import android.text.Editable
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleObserver
+import androidx.lifecycle.OnLifecycleEvent
 import com.mercadolibre.core.resultWrapper.ResultWrapper
 import com.mercadolibre.searchapplication.domain.usecases.GetSuggestionsUseCase
 import com.mercadolibre.searchapplication.presentation.fragments.search.SearchSuggestionContract.View
@@ -12,6 +15,11 @@ import kotlinx.coroutines.launch
 
 class SearchSuggestionPresenter(private val suggestionsUseCase: GetSuggestionsUseCase) :
     SearchSuggestionContract.Presenter {
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
+    private fun onCreateView(){
+        view.showEmptySearch()
+    }
 
     private fun getSuggestion(query: String) {
         CoroutineScope(Dispatchers.IO).launch {

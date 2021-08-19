@@ -13,4 +13,5 @@
     <string name="empty_search_subtitle">Revisa que la palabra este bien escrita. Tambien puedes probar con menos terminos o mas generales</string>
     <string name="empty_search_noTitle">No encontramos publicaciones</string>
     <string name="mercado_encuentra">En mercado libre encuentras todo</string>
+    <string name="cancelar">Cancelar</string>
 </resources>
