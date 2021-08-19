@@ -2,6 +2,7 @@ package com.mercadolibre.searchapplication.extensions
 
 import android.widget.ImageView
 import android.widget.ImageView.ScaleType.CENTER_CROP
+import android.widget.ImageView.ScaleType.FIT_XY
 import coil.load
 import com.mercadolibre.searchapplication.R
 import java.text.NumberFormat
@@ -13,6 +14,7 @@ fun ImageView.loadImageFromUrl(url: String) {
         error(R.drawable.ic_error_loading)
     }
     scaleType = CENTER_CROP
+    scaleType = FIT_XY
 }
 
 private fun getCurrencyInstance() =

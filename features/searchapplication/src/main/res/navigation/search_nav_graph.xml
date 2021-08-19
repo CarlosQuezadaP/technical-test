@@ -44,7 +44,12 @@
         </action>
         <action
             android:id="@+id/action_productResult_to_detailFragment"
-            app:destination="@id/detailFragment" />
+            app:destination="@id/detailFragment">
+
+            <argument
+                android:name="product"
+                app:argType="com.mercadolibre.searchapplication.domain.models.Product" />
+        </action>
         <argument
             android:name="query"
             app:argType="string" />
@@ -54,6 +59,12 @@
         android:id="@+id/detailFragment"
         android:name="com.mercadolibre.searchapplication.presentation.fragments.detail.DetailFragment"
         android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_detail">
+
+        <argument
+            android:name="product"
+            app:argType="com.mercadolibre.searchapplication.domain.models.Product" />
+
+    </fragment>
 
 </navigation>

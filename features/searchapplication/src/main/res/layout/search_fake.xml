@@ -22,7 +22,7 @@
 
             <EditText
                 android:id="@+id/editextSearchProduct"
-                style="@style/SearchProductsBoxStyle"
+                style="@style/SearchBoxStyle"
                 android:hint="@string/buscar_en_mercadolibre"
                 android:importantForAutofill="no" />
         </com.google.android.material.appbar.MaterialToolbar>

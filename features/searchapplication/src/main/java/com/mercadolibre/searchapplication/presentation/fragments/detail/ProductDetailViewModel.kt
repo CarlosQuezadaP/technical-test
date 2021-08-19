@@ -8,7 +8,7 @@ import com.mercadolibre.searchapplication.domain.usecases.GetProductDetailUseCas
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
-class SearchViewModel(private val productDetailUseCase: GetProductDetailUseCase) : ViewModel() {
+class ProductDetailViewModel(private val productDetailUseCase: GetProductDetailUseCase) : ViewModel() {
 
     private var _detail: MutableLiveData<String> = MutableLiveData()
     var detail: LiveData<String> = _detail
@@ -17,7 +17,7 @@ class SearchViewModel(private val productDetailUseCase: GetProductDetailUseCase)
         viewModelScope.launch {
             productDetailUseCase(productID).collect {
                 it.fold({ error ->
-
+                    _detail.value = error.message
                 }, { productDescription ->
                     _detail.value = productDescription
                 })

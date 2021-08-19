@@ -1,5 +1,6 @@
 package com.condor.data.di
 
+import com.mercadolibre.searchapplication.data.api.ApiDetail
 import com.mercadolibre.searchapplication.data.api.ApiProducts
 import com.mercadolibre.searchapplication.data.api.ApiSuggestion
 import com.mercadolibre.searchapplication.data.network.BASE_URL
@@ -59,4 +60,8 @@ val networkModule = module {
             .create(ApiSuggestion::class.java)
     }
 
+    single<ApiDetail> {
+        provideBuild()
+            .create(ApiDetail::class.java)
+    }
 }
