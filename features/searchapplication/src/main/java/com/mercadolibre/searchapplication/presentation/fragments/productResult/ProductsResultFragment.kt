@@ -90,7 +90,8 @@ class ProductsResultFragment : BaseFragment(), ProductResultContract.View, Produ
     }
 
     override fun onProductClick(product: Product) {
-
+        val action = ProductsResultFragmentDirections.actionProductResultToDetailFragment()
+        findNavController().navigate(action)
     }
 
 }

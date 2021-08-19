@@ -52,7 +52,7 @@
 
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.mercadolibre.searchapplication.presentation.fragments.DetailFragment"
+        android:name="com.mercadolibre.searchapplication.presentation.fragments.detail.DetailFragment"
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail" />
 
